@@ -1,0 +1,10 @@
+Ejercicio 3:
+En una carrera de ciclistas participan N competidores, donde N se ingresa por teclado.
+Desarrollar un programa que permita cargar, por cada competidor, su numero y el tiempo de carrera en horas, minutos y segundos. 
+
+Luego se solicita:
+-Mostrar el numero del ganador de la carrera y el tiempo que empleo
+-Ingresando por teclado el tiempo récord registrado para dicha carrera, informar si el ganador batió el récord anterior.
+-Calcular y mostrar el tiempo promedio entre todos los ciclistas.
+
+Los ciclistas se identifican con números enteros, no necesariamente correlativos.
