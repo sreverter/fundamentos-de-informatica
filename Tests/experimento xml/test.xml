@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Evento>
+  <Nombre>Maratón Ciudad 2025</Nombre>
+  <Fecha>2025-05-20</Fecha>
+  <TipoCarrera>Maratón</TipoCarrera>
+  <Distancia>42.195 km</Distancia>
+  <CantidadCompetidores>500</CantidadCompetidores>
+  <Lugar>Buenos Aires</Lugar>
+  <Record>02:03:15</Record>
+  <Ganadores>
+    <PrimerPuesto>
+      <Nombre>Juan Pérez</Nombre>
+      <Tiempo>02:10:35</Tiempo>
+    </PrimerPuesto>
+    <SegundoPuesto>
+      <Nombre>Luis Gómez</Nombre>
+      <Tiempo>02:12:10</Tiempo>
+    </SegundoPuesto>
+    <TercerPuesto>
+      <Nombre>Carlos Ruiz</Nombre>
+      <Tiempo>02:14:50</Tiempo>
+    </TercerPuesto>
+  </Ganadores>
+  <Corredores>
+    <Corredor>
+      <Nombre>Juan Pérez</Nombre>
+      <Tiempo>02:10:35</Tiempo>
+    </Corredor>
+    <Corredor>
+      <Nombre>Luis Gómez</Nombre>
+      <Tiempo>02:12:10</Tiempo>
+    </Corredor>
+    <Corredor>
+      <Nombre>Carlos Ruiz</Nombre>
+      <Tiempo>02:14:50</Tiempo>
+    </Corredor>
+    <Corredor>
+      <Nombre>María López</Nombre>
+      <Tiempo>02:20:45</Tiempo>
+    </Corredor>
+    <!-- Puedes añadir más corredores aquí -->
+  </Corredores>
+</Evento>
+
