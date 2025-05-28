@@ -1,4 +1,5 @@
 import funciones as prueba
+#import random
 
 #ingresar_nombre_carrera()
 #    carrera_nombre = ingrese nombre de la carrera_nombre
@@ -8,7 +9,7 @@ prueba.ingresar_nombre_carrera()
 #ingresar_cantidad_corredores()
 #    cantidad_corredores = ingrese cantidad de corredores
 
-prueba.ingresar_cantidad_corredores()
+cantidad = prueba.ingresar_cantidad_corredores() 
 
 '''
 class Corredor:
@@ -18,7 +19,18 @@ class Corredor:
         self.edad = edad
         self.tiempo = tiempo
         self.numero = numero
+'''
+#Se crea el objeto corredor para guardarlo dentro de un arreglo
+class Corredor:
+    def __init__(self, nombre, tiempo, numero):
+        print(f"Creando corredor con el {nombre}, el numero {numero}, y el tiempo de {tiempo}")
+        self.nombre = nombre
+        self.tiempo = tiempo
+        self.numero = numero
+        pass
 
+
+'''
 ingresar_data_corredores()
     corredores = []
     para i en rango de (cantidad de corredores):
@@ -28,7 +40,19 @@ ingresar_data_corredores()
         random.randint(1, cantidad de corredores) 
         corredores[i] = Corredor(nombre, edad, tiempo, numero)
     devolver corredores
+'''
 
+def ingresar_data_corredores():
+    corredores = []
+    for i in range (cantidad):
+        nombre = input("Ingrese nombre del corredor")
+        tiempo = int(input("Ingrese tiempo del corredor"))
+        #numero = random.randint(1, cantidad)
+        numero = i + 1
+        corredores.append(Corredor(nombre, tiempo, numero))
+    return corredores
+
+'''
 mostrar_ganador()
     para i en rango de (cantidad de corredores):
 
