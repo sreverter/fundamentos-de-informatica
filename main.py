@@ -3,11 +3,13 @@ import funciones as prueba
 
 #ingresar_nombre_carrera()
 #    carrera_nombre = ingrese nombre de la carrera_nombre
+# Se ingresa el nombre de la carrera
 
 prueba.ingresar_nombre_carrera()
 
 #ingresar_cantidad_corredores()
 #    cantidad_corredores = ingrese cantidad de corredores
+# Se ingresa la cantidad de corredores que van a participar en la carrera
 
 cantidad = prueba.ingresar_cantidad_corredores() 
 
@@ -20,7 +22,7 @@ class Corredor:
         self.tiempo = tiempo
         self.numero = numero
 '''
-#Se crea el objeto corredor para guardarlo dentro de un arreglo
+#Se crea el objeto Corredor para guardarlo dentro de un arreglo
 class Corredor:
     def __init__(self, nombre, tiempo, numero):
         print(f"Creando corredor con el {nombre}, el numero {numero}, y el tiempo de {tiempo}")
@@ -41,6 +43,7 @@ ingresar_data_corredores()
         corredores[i] = Corredor(nombre, edad, tiempo, numero)
     devolver corredores
 '''
+# Funcion en la cual se ingresan los datos de los corredores y se guardan en un arreglo de objetos Corredor
 
 def ingresar_data_corredores():
     corredores = []
@@ -71,7 +74,26 @@ mostrar_ganador()
         mostrar tiempo_ganador
             
 
+'''
 
+def metodoBurbuja(corredores):
+    n = len(corredores)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if corredores[j].tiempo > corredores[j+1].tiempo:
+                corredores[j], corredores[j+1] = corredores[j+1], corredores[j]
+
+    for recorrido in range (1, len(corredores)):
+        for i in range (len(corredores) - recorrido):
+            if corredores[i].tiempo > corredores[i + 1].tiempo:
+                corredores[i], corredores[i + 1] = corredores[i + 1], corredores[i]
+
+
+
+
+
+
+'''
 ingresar_tiempo_record()
     tiempo_record = ingrese tiempo record
     si tiempo_record < tiempo_ganador
