@@ -25,7 +25,7 @@ class Corredor:
 #Se crea el objeto Corredor para guardarlo dentro de un arreglo
 class Corredor:
     def __init__(self, nombre, tiempo, numero):
-        print(f"Creando corredor con el {nombre}, el numero {numero}, y el tiempo de {tiempo}")
+        print(f"Creando corredor con el nombre {nombre}, el numero {numero}, y el tiempo de {tiempo}")
         self.nombre = nombre
         self.tiempo = tiempo
         self.numero = numero
@@ -48,11 +48,12 @@ ingresar_data_corredores()
 def ingresar_data_corredores():
     corredores = []
     for i in range (cantidad):
-        nombre = input("Ingrese nombre del corredor")
-        tiempo = int(input("Ingrese tiempo del corredor"))
+        nombre = input("Ingrese nombre del corredor: ")
+        tiempo = int(input("Ingrese tiempo del corredor: "))
         #numero = random.randint(1, cantidad)
         numero = i + 1
         corredores.append(Corredor(nombre, tiempo, numero))
+        print(corredores)
     return corredores
 
 '''
@@ -78,27 +79,42 @@ mostrar_ganador()
 
 def metodoBurbuja(corredores):
     n = len(corredores)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if corredores[j].tiempo > corredores[j+1].tiempo:
-                corredores[j], corredores[j+1] = corredores[j+1], corredores[j]
-
-    for recorrido in range (1, len(corredores)):
+    for recorrido in range (1, n):
         for i in range (len(corredores) - recorrido):
             if corredores[i].tiempo > corredores[i + 1].tiempo:
                 corredores[i], corredores[i + 1] = corredores[i + 1], corredores[i]
+    return corredores[0]  # Retorna el corredor con el menor tiempo
+
+
+def ingresar_tiempo_record():
+    tiempo_record = int(input("Ingrese el tiempo record: "))
+    if tiempo_record > tiempo_ganador:
+        print(f"Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_record}")
+    else:
+        print(f"No se ha roto el tiempo record. El tiempo record sigue siendo: {tiempo_record} segundos")
 
 
 
+#Recorrido normal del programa
 
+lista_corredores = ingresar_data_corredores()
 
-
+checkear_ganador = input("¿Desea ver al ganador? (si/no): ")
+if checkear_ganador == "si":
+    ganador = metodoBurbuja(lista_corredores)
+    print(f"El ganador es {ganador.nombre} con el tiempo de {ganador.tiempo} segundos y el numero de corredor {ganador.numero}")
+    tiempo_ganador = ganador.tiempo
+ingreso_tiempo_record = input("¿Desea ingresar el tiempo record? (si/no): ")
+if ingreso_tiempo_record == "si":
+    ingresar_tiempo_record()
 '''
 ingresar_tiempo_record()
     tiempo_record = ingrese tiempo record
     si tiempo_record < tiempo_ganador
         mostrar "Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_record}"
+'''
 
+'''
 calcular_promedios_tiempos()
     total_tiempo = 0
     total_tiempo = total_tiempo + corredores[i].tiempo

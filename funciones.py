@@ -11,3 +11,4 @@ def ingresar_cantidad_corredores():
     cantidad_corredores = int(input("Ingrese la cantidad de corredores: "))
     print("La cantidad de corredores es:", cantidad_corredores)
     return cantidad_corredores
+
