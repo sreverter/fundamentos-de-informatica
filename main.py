@@ -85,6 +85,12 @@ def metodoBurbuja(corredores):
                 corredores[i], corredores[i + 1] = corredores[i + 1], corredores[i]
     return corredores[0]  # Retorna el corredor con el menor tiempo
 
+'''
+ingresar_tiempo_record()
+    tiempo_record = ingrese tiempo record
+    si tiempo_record < tiempo_ganador
+        mostrar "Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_record}"
+'''
 
 def ingresar_tiempo_record():
     tiempo_record = int(input("Ingrese el tiempo record: "))
@@ -92,6 +98,23 @@ def ingresar_tiempo_record():
         print(f"Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_record}")
     else:
         print(f"No se ha roto el tiempo record. El tiempo record sigue siendo: {tiempo_record} segundos")
+
+
+'''
+calcular_promedios_tiempos()
+    total_tiempo = 0
+    total_tiempo = total_tiempo + corredores[i].tiempo
+    promedio_tiempo = total_tiempo / cantidad_corredores
+    mostrar promedio_tiempo
+'''
+
+def calcular_promedios_tiempos(corredores):
+    total_tiempo = 0
+    n = len(corredores)
+    for i in range(n):
+        total_tiempo += corredores[i].tiempo
+    promedio_tiempo = total_tiempo / n
+    print(f"El promedio de tiempo de los corredores es: {promedio_tiempo} segundos")
 
 
 
@@ -107,18 +130,7 @@ if checkear_ganador == "si":
 ingreso_tiempo_record = input("¿Desea ingresar el tiempo record? (si/no): ")
 if ingreso_tiempo_record == "si":
     ingresar_tiempo_record()
-'''
-ingresar_tiempo_record()
-    tiempo_record = ingrese tiempo record
-    si tiempo_record < tiempo_ganador
-        mostrar "Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_record}"
-'''
-
-'''
-calcular_promedios_tiempos()
-    total_tiempo = 0
-    total_tiempo = total_tiempo + corredores[i].tiempo
-    promedio_tiempo = total_tiempo / cantidad_corredores
-    mostrar promedio_tiempo
-'''
+mostrar_promedio = input("¿Desea ver el promedio de tiempos? (si/no): ")
+if mostrar_promedio == "si":
+    calcular_promedios_tiempos(lista_corredores)
 
