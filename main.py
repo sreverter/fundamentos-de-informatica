@@ -76,6 +76,7 @@ mostrar_ganador()
             
 
 '''
+#Funcion que compara los tiempos de los corredores para obtener el menor tiempo y el numero correspondiente del corredor que hizo dicho tiempo. Se utiliza el metodo burbuja para ordenar los tiempos de los corredores.
 
 def metodoBurbuja(corredores):
     n = len(corredores)
@@ -92,10 +93,12 @@ ingresar_tiempo_record()
         mostrar "Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_record}"
 '''
 
+# Funcion que permite ingresar un tiempo record y compara si es menor al tiempo del ganador
+
 def ingresar_tiempo_record():
     tiempo_record = int(input("Ingrese el tiempo record: "))
     if tiempo_record > tiempo_ganador:
-        print(f"Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_record}")
+        print(f"Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_ganador}")
     else:
         print(f"No se ha roto el tiempo record. El tiempo record sigue siendo: {tiempo_record} segundos")
 
@@ -107,6 +110,8 @@ calcular_promedios_tiempos()
     promedio_tiempo = total_tiempo / cantidad_corredores
     mostrar promedio_tiempo
 '''
+
+# Funcion que calcula el promedio de los tiempos de los corredores y lo muestra por pantalla
 
 def calcular_promedios_tiempos(corredores):
     total_tiempo = 0
