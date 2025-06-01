@@ -5,12 +5,12 @@ class Corredor:
         self.tiempo = tiempo
 
 class Evento:
-    def __init__(self, nombre, fecha, tipo, distancia, cantidad, lugar, record, ganadores, corredores):
+    def __init__(self, nombre, fecha, tipo_carrera, distancia, cantidad_corredores, lugar, record, ganadores, corredores):
         self.nombre = nombre
         self.fecha = fecha
-        self.tipo = tipo
+        self.tipo_carrera = tipo_carrera
         self.distancia = distancia
-        self.cantidad = cantidad
+        self.cantidad_corredores = cantidad_corredores
         self.lugar = lugar
         self.record = record
         self.ganadores = ganadores

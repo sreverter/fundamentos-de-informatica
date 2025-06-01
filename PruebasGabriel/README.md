@@ -17,7 +17,7 @@ Aplicación de escritorio en Python con interfaz gráfica (Tkinter) para la gest
 
 ```
 app_eventos/
-├── Datos/                      # Archivos JSON de eventos guardados
+├── Datos/                     # Archivos JSON de eventos guardados
 ├── logica/                    # Lógica de aplicación (ABM, filtros, reglas)
 │   ├── abm_eventos.py         # Alta y almacenamiento de eventos
 │   └── reglas_negocio.py      # Reglas para búsqueda y comparación
@@ -25,7 +25,7 @@ app_eventos/
 │   └── entidades.py                        
 ├── pantalla_busqueda.py
 ├── pantalla_carga.py
-└── ventana_principal.py	# Interfaz gráfica (Tkinter)
+└── ventana_principal.py	   # Interfaz gráfica (Tkinter)
 └── README.md
 ```
 
@@ -54,7 +54,7 @@ Pendiente...
   ```
   Ejemplo:
   ```
-  Sarasa_2025_20250520.json
+  Buenos_Aires_Corre_20250310_Maraton.json
   ```
 
 ---
@@ -73,7 +73,7 @@ La pantalla de búsqueda
 
 - Carga de archivos JSON existentes.
 - Filtros avanzados (por fecha, lugar, etc).
-- Visualización de estadísticas y gráficos.
+- Visualización de la informacion.
 
 ---
 

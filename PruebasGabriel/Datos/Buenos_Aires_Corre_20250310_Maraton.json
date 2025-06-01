@@ -1,0 +1,50 @@
+{
+    "Nombre": "Buenos Aires Corre",
+    "Fecha": "2025-03-10",
+    "Tipo": "Maraton",
+    "Distancia": "10",
+    "Cantidad": 5,
+    "Lugar": "Bosques de Palermo",
+    "Record": "30",
+    "Ganadores": {
+        "PrimerPuesto": {
+            "Nombre": "Nadie",
+            "Tiempo": "120"
+        },
+        "SegundoPuesto": {
+            "Nombre": "Alguien",
+            "Tiempo": "121"
+        },
+        "TercerPuesto": {
+            "Nombre": "Sarasa",
+            "Tiempo": "28"
+        }
+    },
+    "Corredores": [
+        {
+            "Nombre": "Nadie",
+            "Numero": 0,
+            "Tiempo": "120"
+        },
+        {
+            "Nombre": "Alguien",
+            "Numero": 1,
+            "Tiempo": "121"
+        },
+        {
+            "Nombre": "Sarasa",
+            "Numero": 666,
+            "Tiempo": "28"
+        },
+        {
+            "Nombre": "Juan Nadie",
+            "Numero": 99,
+            "Tiempo": "45"
+        },
+        {
+            "Nombre": "Pepito",
+            "Numero": 1234,
+            "Tiempo": "33"
+        }
+    ]
+}
