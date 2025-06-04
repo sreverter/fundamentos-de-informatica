@@ -1,0 +1,45 @@
+{
+    "Nombre": "Monaco GP",
+    "Fecha": "01 junio 2025",
+    "Tipo": "F1",
+    "Distancia": "300 km",
+    "Cantidad": 20,
+    "Lugar": "Monaco",
+    "Record": "77 segundos",
+    "Ganadores": {
+        "PrimerPuesto": {
+            "Nombre": "Santiago",
+            "Tiempo": "80"
+        },
+        "SegundoPuesto": {
+            "Nombre": "Gabi",
+            "Tiempo": "76"
+        },
+        "TercerPuesto": {
+            "Nombre": "Leclerc",
+            "Tiempo": "60"
+        }
+    },
+    "Corredores": [
+        {
+            "Nombre": "Santiago",
+            "Numero": 1,
+            "Tiempo": "80"
+        },
+        {
+            "Nombre": "Gabi",
+            "Numero": 2,
+            "Tiempo": "76"
+        },
+        {
+            "Nombre": "Leclerc",
+            "Numero": 33,
+            "Tiempo": "60"
+        },
+        {
+            "Nombre": "Colapinto",
+            "Numero": 43,
+            "Tiempo": "80"
+        }
+    ]
+}

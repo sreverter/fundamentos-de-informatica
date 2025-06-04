@@ -8,3 +8,27 @@ Luego se solicita:
 -Calcular y mostrar el tiempo promedio entre todos los ciclistas.
 
 Los ciclistas se identifican con números enteros, no necesariamente correlativos.
+
+
+
+
+
+-Cosas a hacer:
+--Usar la app de Gabi: 
+    -Sacar de la carpeta de prueba y dejarla en la raiz para unir e importar funciones
+--Validacion de datos para todas las funciones
+--Crear funcion o logica para generar numeros randoms para los corredores que sean integers no correlativos y que se 
+  valide que no este repetido el numero entre los corredores.
+--Crear clase(Objeto) para importar todo el main de la APP a la carpeta logica ¿?¿?
+--Consultar al profesor si utilizar clases(Objetos) o funciones para importar a la APP
+--
+
+
+
+
+
+----Implementar github Issues----
+----tkinter designer----
+----Readme.so----
+----pytest----
+----gammaapp----

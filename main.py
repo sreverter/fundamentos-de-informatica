@@ -23,6 +23,7 @@ class Corredor:
         self.numero = numero
 '''
 #Se crea el objeto Corredor para guardarlo dentro de un arreglo
+'''
 class Corredor:
     def __init__(self, nombre, tiempo, numero):
         print(f"Creando corredor con el nombre {nombre}, el numero {numero}, y el tiempo de {tiempo}")
@@ -30,7 +31,7 @@ class Corredor:
         self.tiempo = tiempo
         self.numero = numero
         pass
-
+'''
 
 '''
 ingresar_data_corredores()
@@ -46,13 +47,13 @@ ingresar_data_corredores()
 # Funcion en la cual se ingresan los datos de los corredores y se guardan en un arreglo de objetos Corredor
 
 def ingresar_data_corredores():
-    corredores = []
-    for i in range (cantidad):
+    corredores = [] #es lista
+    for i in range(cantidad): #cambiar
         nombre = input("Ingrese nombre del corredor: ")
         tiempo = int(input("Ingrese tiempo del corredor: "))
         #numero = random.randint(1, cantidad)
-        numero = i + 1
-        corredores.append(Corredor(nombre, tiempo, numero))
+        numero = i #duplicado
+        #corredores.append(Corredor(nombre, tiempo, numero))
         print(corredores)
     return corredores
 
@@ -139,3 +140,12 @@ mostrar_promedio = input("¿Desea ver el promedio de tiempos? (si/no): ")
 if mostrar_promedio == "si":
     calcular_promedios_tiempos(lista_corredores)
 
+
+
+
+import random
+
+cc = int(input("Cuantos corredores?"))
+for i in range(cc):
+    aleatorio = random.randint(1,99)
+    lista + '_' + aleatorio = []

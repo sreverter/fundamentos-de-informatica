@@ -15,10 +15,10 @@ class Aplicacion:
         self.lista_archivos.pack(fill="both", expand=True, padx=10, pady=10)
         self.cargar_archivos()
 
-        # ----- Botones de navegacion
+        # ----- Frame principal
         self.frame_principal = tk.Frame(ventana)
         self.frame_principal.pack()
-
+        # ----- Botones de navegacion
         tk.Button(self.frame_principal, text="Cargar Evento", width=20, command=self.abrir_carga).pack(pady=5)       
         tk.Button(self.frame_principal, text="Buscar Eventos", width=20, command=self.abrir_busqueda).pack(pady=5)
 

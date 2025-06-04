@@ -12,3 +12,5 @@ def ingresar_cantidad_corredores():
     print("La cantidad de corredores es:", cantidad_corredores)
     return cantidad_corredores
 
+
+#Crear funcion de burbujeo con listas apareadas (Santi)

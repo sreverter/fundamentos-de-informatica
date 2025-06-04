@@ -1,0 +1,40 @@
+{
+    "Nombre": "Carrera caridad",
+    "Fecha": "04 junio 2025",
+    "Tipo": "Carrera distancia",
+    "Distancia": "10 km",
+    "Cantidad": 20,
+    "Lugar": "Monte grande",
+    "Record": "2 horas",
+    "Ganadores": {
+        "PrimerPuesto": {
+            "Nombre": "Santiago",
+            "Tiempo": "3 horas"
+        },
+        "SegundoPuesto": {
+            "Nombre": "Gabriel",
+            "Tiempo": "2 horas y media"
+        },
+        "TercerPuesto": {
+            "Nombre": "Martin",
+            "Tiempo": "2 horas 10 minutos"
+        }
+    },
+    "Corredores": [
+        {
+            "Nombre": "Santiago",
+            "Numero": 1,
+            "Tiempo": "3 horas"
+        },
+        {
+            "Nombre": "Gabriel",
+            "Numero": 3,
+            "Tiempo": "2 horas y media"
+        },
+        {
+            "Nombre": "Martin",
+            "Numero": 10,
+            "Tiempo": "2 horas 10 minutos"
+        }
+    ]
+}
