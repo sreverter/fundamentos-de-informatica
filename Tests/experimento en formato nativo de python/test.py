@@ -18,7 +18,7 @@ def instanciar_competidores(): #corre un obtener info cmd por cada competidor qu
     iteraciones = 0
     while iteraciones < int(raiz['info_carrera']['cantidad_competidores']):
         print('competidor:', iteraciones + 1)
-        raiz[iteraciones] = obtener_info_cmd(base_competidor) #añadirle a raiz un subnivel unico y llenarlo con los datos del competidor
+        raiz['competidores'][iteraciones] = obtener_info_cmd(base_competidor) #añadirle a raiz un subnivel unico y llenarlo con los datos del competidor
         iteraciones = iteraciones + 1
         
 
@@ -26,6 +26,7 @@ print('info de la carrera')
 raiz['info_carrera'] = obtener_info_cmd(base_info_carrera) #añadirle a raiz el subinivel 'info carrera' y dentro de ese subnivel promptear a la terminal para que lo llene c'el contenido en base al archivo base 'info carrera'
 
 print('info de los competidores')
+raiz['competidores'] = {} #crear un subnivel
 instanciar_competidores() #añadir competidores
 
 print(raiz)
