@@ -6,7 +6,10 @@ def ingresar_nombre_carrera():
     return nombre_carrera
 
 def ingresar_cantidad_corredores():
-    cantidad_corredores = int(input("Ingrese la cantidad de corredores: "))
+    cantidad_corredores = input("Ingrese la cantidad de corredores (máximo 10): ")
+    while not cantidad_corredores.isdigit() or int(cantidad_corredores) < 1 or int(cantidad_corredores) > 10:
+        cantidad_corredores = input("Cantidad inválida. Ingrese un número entre 1 y 10: ")
+    cantidad_corredores = int(cantidad_corredores)
     print("La cantidad de corredores es:", cantidad_corredores)
     return cantidad_corredores
 
@@ -30,12 +33,15 @@ def ingresar_data_corredores():
                 numero_corredor = random.randint(1, cantidad)
                 numero_repetido = busqueda_secuencial(numero_corredor, corredores_numero)
             corredores_numero.append(numero_corredor)
-        corredores_tiempo.append(int(input("Ingrese el tiempo del corredor: ")))
+        # Ingreso del tiempo con validación
+        print("Ingrese el tiempo del corredor (formato hh mm ss):")
+        corredores_tiempo.append(ingresar_tiempo())
     mostrar_lista_corredores = input("Desea ver la lista de corredores? (si/no): ")
     if mostrar_lista_corredores.lower() == "si":
         for i in range(cantidad):
             print(f"Corredor N°{corredores_numero[i]}: {corredores_nombre[i]} con tiempo {corredores_tiempo[i]}")
         return corredores_nombre, corredores_tiempo, corredores_numero
+
 
 #funcion que compara los tiempos de los corredores para obtener el menor tiempo. Al usar listas apareadas, tambien se cambia el nombre y el numero teniendo en cuenta el tiempo del corredor
 def metodoBurbuja(nombre, tiempo, numero):
@@ -80,3 +86,26 @@ def calcular_promedios_tiempos(corredores):
         total_tiempo += corredores[i]
     promedio_tiempo = total_tiempo / n
     print(f"El promedio de tiempo de los corredores es: {promedio_tiempo} segundos")
+
+# Función para validar ingreso del tiempo en formato correcto
+
+def ingresar_tiempo():
+        while True:
+            try:
+                h = int(input("Horas: "))
+                m = int(input("Minutos: "))
+                s = int(input("Segundos: "))
+                if h < 0 or m < 0 or s < 0 or m >= 60 or s >= 60:
+                    print("Tiempo inválido. Los minutos y segundos deben estar entre 0 y 59.")
+                    continue
+                return h * 3600 + m * 60 + s
+            except ValueError:
+                print("Ingresá solo números enteros.")
+
+# Función para convertir horas, minutos y segundos en segundos
+
+def convertir_a_hms(segundos):
+    horas = segundos // 3600
+    minutos = (segundos % 3600) // 60
+    segundos_restantes = segundos % 60
+    return f"{horas}h {minutos}m {segundos_restantes}s"

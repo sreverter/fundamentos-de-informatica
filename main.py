@@ -9,7 +9,7 @@ nombres, tiempos, numeros = funcion.ingresar_data_corredores()
 checkear_ganador = input("¿Desea ver al ganador? (si/no): ")
 if checkear_ganador == "si":
     ganador = funcion.metodoBurbuja(nombres, tiempos, numeros)
-    print(f"El ganador es {ganador[0]} con el tiempo de {ganador[1]} segundos y el numero de corredor {ganador[2]}")
+    print(f"El ganador es {ganador[0]} con un tiempo de {funcion.convertir_a_hms(ganador[1])} y el número de corredor {ganador[2]}")
     tiempo_ganador = ganador[1]
 ingreso_tiempo_record = input("¿Desea ingresar el tiempo record? (si/no): ")
 if ingreso_tiempo_record == "si":
