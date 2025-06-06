@@ -2,6 +2,8 @@ import random
 
 def ingresar_nombre_carrera():
     nombre_carrera = input("Ingrese el nombre de la carrera: ")
+    while nombre_carrera.strip() == "":
+            nombre_carrera = input("El nombre de la carrera no puede estar vacío. Ingrese nuevamente: ")
     print("El nombre de la carrera es:", nombre_carrera)
     return nombre_carrera
 
@@ -22,7 +24,10 @@ def ingresar_data_corredores():
     corredores_numero = []
     corredores_tiempo = []
     for i in range(cantidad):
-        corredores_nombre.append(input("Ingrese nombre del corredor: "))
+        nombre = input("Ingrese nombre del corredor: ")
+        while nombre.strip() == "":
+            nombre = input("El nombre no puede estar vacío. Ingrese nuevamente: ")
+        corredores_nombre.append(nombre)
         #Logica de buscar numeros entre corredores
         numero_corredor = random.randint(1, cantidad)
         numero_repetido = busqueda_secuencial(numero_corredor, corredores_numero)
@@ -39,7 +44,7 @@ def ingresar_data_corredores():
     mostrar_lista_corredores = input("Desea ver la lista de corredores? (si/no): ")
     if mostrar_lista_corredores.lower() == "si":
         for i in range(cantidad):
-            print(f"Corredor N°{corredores_numero[i]}: {corredores_nombre[i]} con tiempo {corredores_tiempo[i]}")
+            print(f"Corredor N°{corredores_numero[i]}: {corredores_nombre[i]} con tiempo {convertir_a_hms(corredores_tiempo[i])}")
         return corredores_nombre, corredores_tiempo, corredores_numero
 
 
@@ -71,11 +76,15 @@ def busqueda_secuencial(valor, numeros):
 # Funcion que permite ingresar un tiempo record y compara si es menor al tiempo del ganador
 
 def ingresar_tiempo_record(tiempo_ganador):
-    tiempo_record = int(input("Ingrese el tiempo record: "))
+    print("Ingrese el tiempo récord (formato hh mm ss):")
+    tiempo_record = ingresar_tiempo()
     if tiempo_record > tiempo_ganador:
         print(f"Se ha roto el tiempo record. El nuevo tiempo record es: {tiempo_ganador}")
+        print(f"Es decir: {convertir_a_hms(int(tiempo_record))}")
     else:
         print(f"No se ha roto el tiempo record. El tiempo record sigue siendo: {tiempo_record} segundos")
+        print(f"Es decir: {convertir_a_hms(int(tiempo_record))}")
+
 
 # Funcion que calcula el promedio de los tiempos de los corredores y lo muestra por pantalla
 
@@ -86,6 +95,7 @@ def calcular_promedios_tiempos(corredores):
         total_tiempo += corredores[i]
     promedio_tiempo = total_tiempo / n
     print(f"El promedio de tiempo de los corredores es: {promedio_tiempo} segundos")
+    print(f"Es decir: {convertir_a_hms(int(promedio_tiempo))}")
 
 # Función para validar ingreso del tiempo en formato correcto
 
