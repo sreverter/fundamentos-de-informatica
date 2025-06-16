@@ -99,18 +99,17 @@ def ingresar_tiempo():
     tiempo_en_segundos = 0
 
     while not tiempo_valido:
-        #try:
-        h = int(input("Horas: "))
-        m = int(input("Minutos: "))
-        s = int(input("Segundos: "))
-        if h < 0 or m < 0 or s < 0 or m >= 60 or s >= 60:
-            print("Tiempo inválido. Los minutos y segundos deben estar entre 0 y 59.")
-        else:
-            tiempo_en_segundos = h * 3600 + m * 60 + s
-            tiempo_valido = True
-        #except ValueError:
-        #    print("Ingresá solo números enteros.")
-    
+        try:
+            h = int(input("Horas: "))
+            m = int(input("Minutos: "))
+            s = int(input("Segundos: "))
+            if h < 0 or m < 0 or s < 0 or m >= 60 or s >= 60:
+                print("Tiempo inválido. Los minutos y segundos deben estar entre 0 y 59.")
+            else:
+                tiempo_en_segundos = h * 3600 + m * 60 + s
+                tiempo_valido = True
+        except ValueError:
+            print("Ingresá solo números enteros.")   
     return tiempo_en_segundos
 
 # Función para convertir horas, minutos y segundos en segundos

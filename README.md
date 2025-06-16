@@ -136,3 +136,9 @@ Es decir: 1h 3m 35s
 
 - Apuntes de clase - Fundamentos de Informática (2025)  
 - [Documentación oficial de Python](https://docs.python.org/3/)
+
+---
+
+## 📚 Documento proyecto
+ 
+- [TPO fundamentos de la informatica](https://docs.google.com/document/d/1vkaL4kkrKlzmJWq4H-NaXZ0RkJ0eqDnaNXrUZaiTOgk/edit?usp=sharing)
