@@ -1,7 +1,6 @@
 import funciones as funcion
 
 #Recorrido normal del programa
-
 nombre_carrera = funcion.ingresar_nombre_carrera()
 
 nombres, tiempos, numeros = funcion.ingresar_data_corredores()
@@ -24,5 +23,4 @@ mostrar_promedio = input("¿Desea ver el promedio de tiempos? (si/no): ")
 if mostrar_promedio == "si":
     funcion.calcular_promedios_tiempos(tiempos)
 
-
-# Fin del recorrido normal del programa
+#Fin del recorrido normal del programa
