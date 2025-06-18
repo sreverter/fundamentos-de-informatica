@@ -7,7 +7,8 @@
 ### 📌 Integrantes - Grupo Nº 4
 - Citoler, Martin Alejo
 - Pantano, Ma. Alejandra
-- Reverter, Santiago 
+- Reverter, Santiago
+- Caratti, Alejandro
 - Ruffo, Eduardo Gabriel 
 
 ### 👨‍🏫 Profesor
